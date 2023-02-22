@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230222 00:28:40.724" rpa="false" schemaversion="3">
+<suite id="s1" name="Chronos" source="C:\Users\bruno\OneDrive\Área de Trabalho\Profissional\Robot Framework - Estudo\chronos.robot">
+<test id="s1-t1" name="Comprar produtos no site DemoBlaze" line="9">
+<kw name="Abrir Navegador" library="chronos" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230222 00:28:44.810" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com'.</msg>
+<status status="PASS" starttime="20230222 00:28:44.809" endtime="20230222 00:29:46.435"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230222 00:29:46.435" endtime="20230222 00:29:56.087"/>
+</kw>
+<status status="PASS" starttime="20230222 00:28:44.809" endtime="20230222 00:29:56.087"/>
+</kw>
+<kw name="Comprando MacBook" library="chronos">
+<kw name="Esperar os elementos carregarem" library="chronos">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 00:30:01.106" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230222 00:29:56.106" endtime="20230222 00:30:01.106"/>
+</kw>
+<status status="PASS" starttime="20230222 00:29:56.105" endtime="20230222 00:30:01.106"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${LAPTOP}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:01.107" level="INFO">Clicking link 'Laptops'.</msg>
+<status status="PASS" starttime="20230222 00:30:01.107" endtime="20230222 00:30:07.691"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>Link=${MACBOOK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230222 00:30:07.691" endtime="20230222 00:30:08.562"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${MACBOOK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:08.563" level="INFO">Clicking link 'MacBook Pro'.</msg>
+<status status="PASS" starttime="20230222 00:30:08.562" endtime="20230222 00:30:10.503"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CARRINHO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230222 00:30:10.503" endtime="20230222 00:30:12.201"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CARRINHO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:12.203" level="INFO">Clicking element 'xpath=//div[2]//a'.</msg>
+<status status="PASS" starttime="20230222 00:30:12.201" endtime="20230222 00:30:12.373"/>
+</kw>
+<kw name="Esperar os elementos carregarem" library="chronos">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 00:30:17.375" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230222 00:30:12.374" endtime="20230222 00:30:17.375"/>
+</kw>
+<status status="PASS" starttime="20230222 00:30:12.373" endtime="20230222 00:30:17.375"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230222 00:30:17.375" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20230222 00:30:17.375" endtime="20230222 00:30:17.380"/>
+</kw>
+<status status="PASS" starttime="20230222 00:29:56.103" endtime="20230222 00:30:17.380"/>
+</kw>
+<kw name="Finalizando a compra do MacBook" library="chronos">
+<kw name="Esperar os elementos carregarem" library="chronos">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 00:30:22.381" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230222 00:30:17.381" endtime="20230222 00:30:22.381"/>
+</kw>
+<status status="PASS" starttime="20230222 00:30:17.380" endtime="20230222 00:30:22.382"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${CART}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:22.382" level="INFO">Clicking link 'Cart'.</msg>
+<status status="PASS" starttime="20230222 00:30:22.382" endtime="20230222 00:30:24.632"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${PLACE ORDER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:24.635" level="INFO">Clicking button 'css=.btn-success'.</msg>
+<status status="PASS" starttime="20230222 00:30:24.633" endtime="20230222 00:30:24.757"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230222 00:30:27.758" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230222 00:30:24.757" endtime="20230222 00:30:27.758"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NOME}</arg>
+<arg>Test1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:27.760" level="INFO">Typing text 'Test1' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20230222 00:30:27.759" endtime="20230222 00:30:28.073"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PAÍS}</arg>
+<arg>Brasil</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:28.074" level="INFO">Typing text 'Brasil' into text field 'id=country'.</msg>
+<status status="PASS" starttime="20230222 00:30:28.073" endtime="20230222 00:30:28.193"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CIDADE}</arg>
+<arg>Lagoinha</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:28.195" level="INFO">Typing text 'Lagoinha' into text field 'id=city'.</msg>
+<status status="PASS" starttime="20230222 00:30:28.193" endtime="20230222 00:30:28.355"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CARTÃO}</arg>
+<arg>40028922</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:28.355" level="INFO">Typing text '40028922' into text field 'id=card'.</msg>
+<status status="PASS" starttime="20230222 00:30:28.355" endtime="20230222 00:30:28.523"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MÊS}</arg>
+<arg>Dezembro</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:28.523" level="INFO">Typing text 'Dezembro' into text field 'id=month'.</msg>
+<status status="PASS" starttime="20230222 00:30:28.523" endtime="20230222 00:30:28.691"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ANO}</arg>
+<arg>3253</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:28.693" level="INFO">Typing text '3253' into text field 'id=year'.</msg>
+<status status="PASS" starttime="20230222 00:30:28.691" endtime="20230222 00:30:28.858"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${COMPRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:28.858" level="INFO">Clicking button 'xpath=//button[text()="Purchase"]'.</msg>
+<status status="PASS" starttime="20230222 00:30:28.858" endtime="20230222 00:30:29.114"/>
+</kw>
+<kw name="Validando se a compra foi um sucesso" library="chronos">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=.sweet-alert&gt;h2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230222 00:30:29.115" endtime="20230222 00:30:29.285"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>css=.sweet-alert&gt;h2</arg>
+<arg>Thank you for your purchase!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230222 00:30:29.287" level="INFO">Verifying element 'css=.sweet-alert&gt;h2' contains exact text 'Thank you for your purchase!'.</msg>
+<status status="PASS" starttime="20230222 00:30:29.285" endtime="20230222 00:30:29.338"/>
+</kw>
+<status status="PASS" starttime="20230222 00:30:29.115" endtime="20230222 00:30:29.338"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${OK}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230222 00:30:29.339" endtime="20230222 00:30:29.368"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${OK}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230222 00:30:29.368" level="INFO">Clicking button 'css=.confirm'.</msg>
+<status status="PASS" starttime="20230222 00:30:29.368" endtime="20230222 00:30:29.472"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PLACE ORDER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230222 00:30:29.472" endtime="20230222 00:30:29.642"/>
+</kw>
+<status status="PASS" starttime="20230222 00:30:17.380" endtime="20230222 00:30:29.643"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230222 00:30:29.646" endtime="20230222 00:30:35.580"/>
+</kw>
+<status status="PASS" starttime="20230222 00:28:44.808" endtime="20230222 00:30:35.581"/>
+</test>
+<status status="PASS" starttime="20230222 00:28:40.726" endtime="20230222 00:30:35.583"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Chronos">Chronos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
